@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- TextView untuk Menu Options (Tiga Titik Vertikal) -->
+    <TextView
+        android:id="@+id/tvOptions"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="&#8942;"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView untuk Nama Barang -->
+    <TextView
+        android:id="@+id/tvItemNamaBarang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Nama Barang Placeholder"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@+id/tvOptions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView untuk Stok Barang -->
+    <TextView
+        android:id="@+id/tvItemStokBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Stok: XX"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:drawableStart="@drawable/ic_inventory"
+        android:drawablePadding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemNamaBarang" />
+
+    <!-- TextView untuk Harga Barang -->
+    <TextView
+        android:id="@+id/tvItemHargaBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Harga: Rp YY.YYY"
+        android:textSize="14sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/ic_price"
+        android:drawablePadding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tvItemStokBarang"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemNamaBarang" />
+
+    <!-- View Pemisah -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemStokBarang" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

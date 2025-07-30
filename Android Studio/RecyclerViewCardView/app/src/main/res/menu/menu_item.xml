@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Item Menu untuk Edit/Ubah -->
+    <item
+        android:id="@+id/ubah"
+        android:title="UBAH"
+        android:icon="@android:drawable/ic_menu_edit" />
+    
+    <!-- Item Menu untuk Delete/Hapus -->
+    <item
+        android:id="@+id/hapus"
+        android:title="HAPUS"
+        android:icon="@android:drawable/ic_menu_delete" />
+        
+</menu>

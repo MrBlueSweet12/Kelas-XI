@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tirta Cahya Buana - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #121212;
+            color: white;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #00bcd4, #008c9e);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #222;
+            font-size: 2rem;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about img {
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .portfolio img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .testimonial {
+            background-color: #fafafa;
+            border-left: 4px solid #00bcd4;
+            padding: 20px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Tirta Cahya Buana</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#testimonial">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Halo, saya Tirta Cahya Buana</h2>
+        <p>Seorang Web Developer yang antusias terhadap dunia programming dan teknologi.</p>
+    </div>
+</section>
+
+<section id="about" class="about container">
+    <img src="foto-profil.png" alt="Foto Tirta Cahya Buana">
+    <div>
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah lulusan SMPN 2 Sidoarjo dan saat ini menempuh pendidikan di SMKN 2 Buduran. Saya menyukai dunia programming sejak muda karena rasa penasaran yang tinggi dan kecintaan terhadap pembelajaran hal-hal baru di bidang teknologi informasi.</p>
+    </div>
+</section>
+
+<section id="skills" class="container">
+    <h2>Keahlian</h2>
+    <ul class="grid">
+        <li>Java</li>
+        <li>HTML & CSS</li>
+        <li>Teamwork</li>
+        <li>Critical Thinking</li>
+        <li>Problem Solving</li>
+        <li>Communication Skills</li>
+    </ul>
+    <h3>Bahasa</h3>
+    <ul class="grid">
+        <li>Bahasa Indonesia</li>
+        <li>Bahasa Inggris</li>
+    </ul>
+</section>
+
+<section id="education" class="container">
+    <h2>Pendidikan</h2>
+    <div class="card">
+        <h3>SMPN 2 Sidoarjo (2020–2023)</h3>
+        <p>Salah satu sekolah menengah negeri favorit di Kabupaten Sidoarjo, Jawa Timur.</p>
+    </div>
+    <div class="card">
+        <h3>SMKN 2 Buduran (2024–Sekarang)</h3>
+        <p>Sekolah kejuruan yang memiliki fokus kuat pada bidang teknologi dan informasi.</p>
+    </div>
+</section>
+
+<section id="testimonial" class="container">
+    <h2>Testimoni</h2>
+    <div class="testimonial">
+        "Tirta menunjukkan semangat belajar yang luar biasa dan mampu bekerja sama dalam tim dengan sangat baik."  
+        <br><strong>- Guru Pembimbing SMKN 2 Buduran</strong>
+    </div>
+</section>
+
+<section id="contact" class="container contact">
+    <h2>Kontak</h2>
+    <p>📞 <strong>Telp:</strong> <a href="tel:+6281249754745">+62 812-4975-4745</a></p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:TirtaCahyaBuana@gmail.com">TirtaCahyaBuana@gmail.com</a></p>
+    <p>📍 <strong>Alamat:</strong> Kahuripan Nirwana Blok AA8/3A</p>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Tirta Cahya Buana. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Database CRUD Testing"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Form Input Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📝 Form Input Data"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ID Field (untuk Update/Delete) -->
+                <EditText
+                    android:id="@+id/et_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="ID (untuk Update/Delete)"
+                    android:inputType="number"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Nama Field -->
+                <EditText
+                    android:id="@+id/et_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Nama Barang"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Stok Field -->
+                <EditText
+                    android:id="@+id/et_stok"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Stok Barang"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Harga Field -->
+                <EditText
+                    android:id="@+id/et_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Harga Barang"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Buttons Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/btn_create"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CREATE"
+                        android:backgroundTint="#4CAF50"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_read"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="READ ALL"
+                        android:backgroundTint="#2196F3"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+
+                </LinearLayout>
+
+                <!-- Buttons Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_update"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="UPDATE"
+                        android:backgroundTint="#FF9800"
+                        android:textColor="@android:color/white"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_delete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DELETE"
+                        android:backgroundTint="#F44336"
+                        android:textColor="@android:color/white"
+                        android:layout_marginStart="4dp" />
+
+                </LinearLayout>
+
+                <!-- Clear All Button -->
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🗑️ CLEAR ALL DATA"
+                    android:backgroundTint="#9C27B0"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Results Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Results &amp; Log"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Initializing database...\n"
+                    android:textSize="14sp"
+                    android:fontFamily="monospace"
+                    android:textColor="#333333"
+                    android:background="#F9F9F9"
+                    android:padding="12dp"
+                    android:minHeight="200dp"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Instructions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 Instructions:\n• CREATE: Fill Nama, Stok, Harga\n• READ ALL: Click to view all data\n• UPDATE: Fill ID + new data\n• DELETE: Fill ID only\n• CLEAR ALL: Remove all data"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:background="#FFFACD"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="2dp" />
+
+    </LinearLayout>
+
+</ScrollView>
